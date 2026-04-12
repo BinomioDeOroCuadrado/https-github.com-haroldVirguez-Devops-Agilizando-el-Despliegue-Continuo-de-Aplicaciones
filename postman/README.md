@@ -24,10 +24,3 @@ py -3.11 scripts/issue_jwt_token.py
 ```
 
 Pega el token en la variable de entorno **`jwt_token`**.
-
-## Documentación publicable (entrega)
-
-1. Con la colección importada, abre la colección → menú **⋯** → **View documentation** / **Publish** (según tu cuenta Postman).
-2. Publica y copia la **URL** para anexarla al informe PDF, como pide la rúbrica.
-
-Para ejecución local, pruebas unitarias y despliegue, consulta el `README.md` de la raíz del proyecto.
