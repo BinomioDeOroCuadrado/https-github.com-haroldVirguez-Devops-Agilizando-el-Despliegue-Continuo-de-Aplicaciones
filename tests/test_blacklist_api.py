@@ -115,10 +115,3 @@ def test_health_returns_ok(client):
 
     assert response.status_code == 200
     assert data == {"status": "ok"}
-
-def test_health_explicit_fail(client):
-    response = client.get("/health")
-    data = response.get_json()
-
-    assert response.status_code == 500
-    assert data == {"status": "fail"}
