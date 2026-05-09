@@ -1,0 +1,51 @@
+{
+  "family": "tarea-blacklist-api",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "1024",
+  "executionRoleArn": "arn:aws:iam::639914975039:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "blacklist-api",
+      "image": "639914975039.dkr.ecr.us-east-1.amazonaws.com/blacklist-api:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+          "name": "FLASK_APP",
+          "value": "application.py"
+        },
+        {
+          "name": "FLASK_ENV",
+          "value": "production"
+        },
+        {
+          "name": "DATABASE_URL",
+          "value": "postgresql://postgres:ywmXuZX76pquqwRlgB5V@database-estasi.c61240qqodh9.us-east-1.rds.amazonaws.com:5432/postgres"
+        },
+        {
+          "name": "JWT_SECRET_KEY",
+          "value": "password-password-password-password"
+        },
+        {
+          "name": "SECRET_KEY",
+          "value": "password"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/tarea-blacklist-api",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}
