@@ -24,18 +24,20 @@
         {
           "name": "FLASK_ENV",
           "value": "production"
-        },
+        }
+      ],
+      "secrets": [
         {
           "name": "DATABASE_URL",
-          "value": "postgresql://postgres:ywmXuZX76pquqwRlgB5V@database-estasi.c61240qqodh9.us-east-1.rds.amazonaws.com:5432/postgres"
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:639914975039:secret:blacklist-api/app-a1b2c3:DATABASE_URL::"
         },
         {
           "name": "JWT_SECRET_KEY",
-          "value": "password-password-password-password"
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:639914975039:secret:blacklist-api/app-a1b2c3:JWT_SECRET_KEY::"
         },
         {
           "name": "SECRET_KEY",
-          "value": "password"
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:639914975039:secret:blacklist-api/app-a1b2c3:SECRET_KEY::"
         }
       ],
       "logConfiguration": {
