@@ -29,15 +29,15 @@
       "secrets": [
         {
           "name": "DATABASE_URL",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:639914975039:secret:blacklist-api/app-a1b2c3:DATABASE_URL::"
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:639914975039:secret:blacklist-api/app-7TmSWV:DATABASE_URL::"
         },
         {
           "name": "JWT_SECRET_KEY",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:639914975039:secret:blacklist-api/app-a1b2c3:JWT_SECRET_KEY::"
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:639914975039:secret:blacklist-api/app-7TmSWV:JWT_SECRET_KEY::"
         },
         {
           "name": "SECRET_KEY",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:639914975039:secret:blacklist-api/app-a1b2c3:SECRET_KEY::"
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:639914975039:secret:blacklist-api/app-7TmSWV:SECRET_KEY::"
         }
       ],
       "logConfiguration": {
